@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Inter, Space_Grotesk } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter, Space_Grotesk } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={inter.className}>
